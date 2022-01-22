@@ -33,7 +33,7 @@ export const FeedbackProvider = ({ children }) => {
         setFeedback(feedback.map((item) => item.id === id ? { ...item, ...updItem } : item))
     }
 
-    const deleteFeedback = (id) => {
+    const deleteFeedback = (item) => {
         if (window.confirm('Are you sure you want to delete?')) {
             setFeedback(feedback.filter((item) => item.id !== id))
         }
